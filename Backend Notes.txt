@@ -1,0 +1,65 @@
+1. Create a Bankapp backend folder
+
+2.Create package.json file {cmd-"npm init"}
+
+3.Create file "index.js" which is the entry point for the server app
+
+4. Install express {cmd-"npm install express --save"}
+
+5. Import express in index.json
+
+6. Using express, create an application : "express()" 
+
+7. Setup port numbers for server applications : "server app.listen()"
+
+8. Install cors(Cross-Origin Resource Sharing)
+    ->To share data with different applications : npm i cors
+
+9. Import cors in index.js
+
+10. Use cors in server app : "server app.use(cors())"
+
+11. Parse json data to js in server app : "server.use(express.json())"
+
+12. Resolving client requests
+     -> server-app.http-method('path', callback function()=>{
+        response send back to client 
+     })
+
+13. Auto compilation - "npm i -g nodemon"
+
+14. Install postman for backend testing
+
+15. Connecting Mongodb database
+      ->mongoose(library)
+
+16. Install mongoose - "npm i mongoose"
+
+17. Create a folder called services in BankApp-backend, and create files "db.js" and "logic.js" inside it
+
+18. In "db.js":-
+      ->Import mongoose
+      ->Define connection string
+      ->Create model and schema
+      ->Export model
+
+19. In "logic.js":-
+      ->Create logic for api call
+      ->Export the function
+
+20. Authentication using JSON Web Token(jwt token)
+      ->It is a JSON object which is used to securely transfer information over the web(between two parties)
+      ->Instal - "npm i jsonwebtoken"
+      ->To generete token - sign() - logic-> login()-. token generate
+      ->Using JSON web token, generate token for user who logged successfully
+      ->Import jwt token in logic.js 
+      ->Verify token, when client requests after successful login
+         ->Login ->>Token generated
+         ->getbalance ->> +append token ->>?Verify?
+
+21. Middleware
+      ->Control request response cycle
+      ->Arguments ->> req,res,next
+      ->Types 
+          ->Application specific  Middleware
+          ->Router specific middleware
